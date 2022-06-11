@@ -16,38 +16,3 @@ wrongcolor="FF1A2E"
 # --lock-text="Huh, It's Locked Now!!!"
 
 i3lock -ef --color=$color -p $pointer --wrong-text="Fuck you" --noinput-text=$noinput --lock-text=$locktext
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

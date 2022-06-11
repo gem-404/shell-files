@@ -17,3 +17,37 @@ wrongcolor="FF1A2E"
 
 i3lock -ef --color=$color -p $pointer --wrong-text="Fuck you" --noinput-text=$noinput --lock-text=$locktext
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

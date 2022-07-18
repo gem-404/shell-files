@@ -1,0 +1,16 @@
+
+Hello mathematicians, here is a question.. (A bit related to computer science also)...
+Suppose you have an array of numbers, or a set of numbers => {1, 2, 3, 4, 5}
+
+These numbers can be positively and absolutely known, by two other distinct numbers, the LCM and their sum.
+If one knows the LCM and the Sum of a set of numbers, one can easily determine the set of numbers.
+
+When coding this in python, the problem is that I can't get the correct LCM of the numbers when 
+the set or the array has more than 20 elements in it. Are there any two other attributes other 
+
+than sum and LCM of a set of numbers that can give me the absolute elements of the array?
+
+(I have also tried this with packages like numpy)
+
+
+

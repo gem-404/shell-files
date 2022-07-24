@@ -1,20 +1,19 @@
 #!/bin/bash
 
 del_func() {
-    if [ $# -eq 0 ]; then
-        sed -i "$d" ~/Desktop/todo.txt
-        exit 1
-    else
-        sed -i $"$1"d ~/Desktop/todo.txt
-    fi
+    for line in $1; do
+        sed -i "'$line'd" ~/Desktop/todo.txt
+    done
 }
 
-del_func() {
-    if [ -z "$1" ]
-    then
-        echo "no argument supplied"
-    fi
-}
+del_func $1
+
+# del_func() {
+#     if [ -z "$1" ]
+#     then
+#         echo "no argument supplied"
+#     fi
+# }
 
 # for removing the first line
 # sed -i "1d" filename

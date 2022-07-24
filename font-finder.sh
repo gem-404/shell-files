@@ -4,6 +4,7 @@
 dir="/usr/share/figlet/fonts/"
 
 files=$(ls $dir)
+clear
 
 for file in $files; do
 

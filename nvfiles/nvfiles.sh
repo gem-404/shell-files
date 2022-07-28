@@ -36,6 +36,7 @@ file_adder() {
 
 file_existence_tester() {
     # tests if a file exists in the given folder.
+    # I will actually write this part tomorrow.
     file_adder
     exit
 }

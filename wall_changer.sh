@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 
 folder=$HOME/pics/
@@ -31,14 +31,14 @@ wal -qi $folder${pic_array[n]}
 
 # for numbers in a range...
 # echo $(( $RANDOM % 113 + 1)) -> Generates a random number between 1 and 113
-# echo $(( $RANDOM % 20 + 5)) -> Generates a random number between 5 and 20
-# echo $(( $RANDOM % 400 + 100)) -> Generates a random number between 100 and 400
+# echo $(( $RANDOM % 20 + 5)) -> Generates a random number between 5 and 25
+# echo $(( $RANDOM % 400 + 100)) -> Generates a random number between 100 and 500
 
 # You get the gist...
 
 # could also be done in this manner...
 # echo $[ $RANDOM % 117 + 1 ] -> for generating a random number between 1 and 117
-# echo $[ $RANDOM % 114 + 17 ] -> for generating a random number between 17 and 114
+# echo $[ $RANDOM % 114 + 17 ] -> for generating a random number between 17 and 131
 
 # and so on and so forth
 

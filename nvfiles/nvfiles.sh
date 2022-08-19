@@ -15,15 +15,15 @@ shfile=./main.sh
 file_adder() {
     case $ext in
         py)
-            mv $pyfile $file
+            cat $pyfile > $file
             nvim $file
             ;;
         js)
-            mv $jsfile $file
+            cat $jsfile > $file
             nvim $file
             ;;
         sh)
-            mv $shfile $file
+            cat $shfile > $file
             nvim $file
             ;;
         *)
@@ -35,9 +35,13 @@ file_adder() {
 # Test if file exists in the given folder.
 
 file_existence_tester() {
-    # tests if a file exists in the given folder.
-    # I will actually write this part tomorrow.
-    file_adder
+    if [ -f "$file" ]; then  
+        file_adder
+    elif [ !-f -s "$file" ]; then
+        nvim file_adder
+    else
+        file_adder
+    fi
     exit
 }
 

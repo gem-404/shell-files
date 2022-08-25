@@ -4,7 +4,7 @@
 # has images only as its files.
 
 link=$1
-ext="jpg|jpeg|png"
+ext="jpg|jpeg|png|mp3|zip|mp4|pdf|zshrc|zsh_history"
 
 echo $link
 
@@ -18,13 +18,11 @@ pics=$(cat pictures.html | grep $ext)
 echo $pics
 
 for pic in $pics; do
+    link=`echo '$pic' | rev | cut -d'.' -f 1 | rev`
+    wget $link
     echo $pic
 done
 
-rm pictures.html 
+rm pictures.html
 cd ../
 rm -rf ./pictures
-
-# I will have to confirm sth from the internet first...
-# I will have to confirm how to check whether you are
-# connected to the internet via a linux command

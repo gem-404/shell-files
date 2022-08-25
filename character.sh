@@ -13,7 +13,7 @@ case $var in
     ;;
 
     # [A-Z])
-    #     echo "Yoe entered an uppercase character"
+    #     echo "You entered an uppercase character"
     # ;;
 
     ([[:upper:]])

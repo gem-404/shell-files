@@ -1,7 +1,20 @@
 #! /bin/bash
 
-file=$1
-ext=$(echo $file | cut -d "." -f 2)
+
+no_of_args=`echo $#` # stores the number of arguments provided in the command line
+
+if [ $no_of_args -eq 0 ]; then
+    nvim # but one can also use, $ set -- defaultarg1 defaultarg2
+elif [ $no_of_args -lt 2 ]; then
+    file=$1
+else
+    file=( "$@" ) # if the number of arguments provided are more than one, then, store them in an array.
+fi
+
+# ext=$(echo $file | cut -d "." -f 2) # This is not the very best method of finding a file's extension
+# esp. if the filename has more than one '.' for example, main.min.css or main.min.bundle.js
+# The below method proves to be the best suited for finding such extensions.
+ext=`echo "${file##*.}"`
 
 pyfile=./main.py
 jsfile=./main.js

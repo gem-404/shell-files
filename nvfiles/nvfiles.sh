@@ -2,14 +2,9 @@
 
 
 no_of_args=`echo $#` # stores the number of arguments provided in the command line
+files=( "$@" )
 
-if [ $no_of_args -eq 0 ]; then
-    nvim # but one can also use, $ set -- defaultarg1 defaultarg2
-elif [ $no_of_args -lt 2 ]; then
-    file=$1
-else
-    file=( "$@" ) # if the number of arguments provided are more than one, then, store them in an array.
-fi
+echo $files
 
 # ext=$(echo $file | cut -d "." -f 2) # This is not the very best method of finding a file's extension
 # esp. if the filename has more than one '.' for example, main.min.css or main.min.bundle.js
@@ -22,6 +17,20 @@ shfile=./main.sh
 htmlfile=./main.html
 gofile=./main.go
 
+file=$1
+touch $file
+
+# if [ $no_of_args -eq 0 ]; then
+#     nvim # but one can also use, $ set -- defaultarg1 defaultarg2
+# elif [ $no_of_args -lt 2 ]; then
+#     file=$1
+#     file_adder()
+# else
+#     file=( "$@" ) # if the number of arguments provided are more than one, then, store them in an array.
+#     for file; do
+#         file_adder()
+#     done
+# fi
 
 file_adder() {
     if [ ! -s "$file" ]; then

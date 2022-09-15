@@ -1,7 +1,7 @@
 #!/bin/bash
 
 
-folder=$HOME/pics/
+folder=$HOME/Pictures/wallpapers/anime
 extensions='.webp|.jpg|.png'
 
 pics=$( ls $folder )

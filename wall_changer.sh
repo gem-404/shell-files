@@ -1,7 +1,7 @@
 #!/bin/bash
 
 
-folder=$HOME/Pictures/wallpapers/anime
+folder=$HOME/pics/
 extensions='.webp|.jpg|.png'
 
 pics=$( ls $folder )
@@ -13,7 +13,12 @@ done
 
 n=$(( $RANDOM % ${#pic_array[@]} ))
 
-wal -qi $folder${pic_array[n]}
+pic=$folder${pic_array[n]}
+
+# functinality to add a picture to a file
+echo $pic >> .wallpapers.txt
+
+wal -qi $pic 
 
 
 # no_of_pics=$(cat -n pics.txt | tail -1 | cut -bd ' ' -f 1)

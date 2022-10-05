@@ -2,7 +2,7 @@
 
 color=00000000
 pointer=default
-wrong="Fuck You"
+# wrong="Fuck You"
 noinput="Come'ON"
 locktext="Huh, It's Locked Now!!!"
 wrongcolor="FF1A2E"
@@ -15,4 +15,4 @@ wrongcolor="FF1A2E"
 # --noinput-text="Enough Deletion Now"
 # --lock-text="Huh, It's Locked Now!!!"
 
-i3lock -ef --color=$color -p $pointer --wrong-text="Fuck you" --noinput-text=$noinput --lock-text=$locktext
+i3lock -ef --color=$color -p $pointer --wrong-text="Fuck You" --noinput-text=$noinput --lock-text=$locktext

@@ -1,24 +1,29 @@
 #!/bin/bash
 
 
-folder=$HOME/pics/
-extensions='.webp|.jpg|.png'
+folder=$HOME/Pictures/wallpapers/anime/
 
-pics=$( ls $folder )
+extensions='.jpeg|.webp|.jpg|.png'
 
-pic_array=()
-for file in $pics; do
-    pic_array+=($file)
-done
+pic=$( ls $folder | shuf -n 1 )
 
-n=$(( $RANDOM % ${#pic_array[@]} ))
 
-pic=$folder${pic_array[n]}
+# pics=$( ls $folder )
+#
+# pic_array=()
+# for file in $pics; do
+#     pic_array+=($file)
+# done
+#
+# n=$(( $RANDOM % ${#pic_array[@]} ))
+#
+# pic=$folder${pic_array[n]}
+#
+# # functionality to add a picture to a file
 
-# functinality to add a picture to a file
-echo $pic >> .wallpapers.txt
+echo $folder$pic >> $HOME/.wallpapers.txt
 
-wal -qi $pic 
+wal -qi $folder$pic 
 
 
 # no_of_pics=$(cat -n pics.txt | tail -1 | cut -bd ' ' -f 1)

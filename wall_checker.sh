@@ -15,3 +15,17 @@ else
     sed -i '3s/anime_wallpapers/anime/' $file
 fi
 
+git add wall_changer.sh
+git commit -am "Just changed from either anime_wallpaper or anime to either anime_wallpaper to anime"
+
+# ------------ Needs some change below --------------- #
+
+#######################################
+# status=`ping -c 3 www.google.com`   #
+#                                     #
+# if [[ $status -ge 0 ]]; then        #
+#     git push;                       #
+# fi                                  #
+#                                     #
+#######################################
+

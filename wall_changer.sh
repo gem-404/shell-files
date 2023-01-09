@@ -1,6 +1,6 @@
 #!/bin/bash
 
-folder=$HOME/anime_wallpapers/
+folder=$HOME/anime/
 
 extensions='.jpeg|.webp|.jpg|.png'
 

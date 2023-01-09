@@ -15,8 +15,10 @@ else
     sed -i '3s/anime_wallpapers/anime/' $file
 fi
 
+cd ~/lab/shell-files
 git add wall_changer.sh
 git commit -am "Just changed from either anime_wallpaper or anime to either anime_wallpaper to anime"
+cd -
 
 # ------------ Needs some change below --------------- #
 

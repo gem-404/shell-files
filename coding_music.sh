@@ -1,5 +1,5 @@
 #!/bin/bash
 
-folder=$HOME/coding_music/
+folder=$HOME/house-music/
 
 vlc $folder

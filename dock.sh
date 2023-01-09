@@ -3,12 +3,12 @@
 echo "Which service do you want {(1 = enable, 2 = disable)"
 read resp
 
-if [[ resp == 1 ]]; then
+if [[ $resp == 1 ]]; then
     systemctl enable docker
     systemctl restart docker
 fi
 
-if [[ resp == 2 ]]; then
+if [[ $resp == 2 ]]; then
     systemctl disable docker
     systemctl status docker
 fi

@@ -14,6 +14,6 @@ wal -qi $pic
 # some logic to delete old lines in our wallpapers file if the
 # file is more than 10 lines long
 
-if [[ $total_lines -gt 10 ]]; then
-    cat `head -n 10 $file | tail -n 5` > $file
-fi
+# if [[ $total_lines -gt 10 ]]; then
+#     cat `head -n 10 $file | tail -n 5` > $file
+# fi

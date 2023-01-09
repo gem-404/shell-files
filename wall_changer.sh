@@ -1,7 +1,6 @@
 #!/bin/bash
 
-
-folder=$HOME/Pictures/wallpapers/anime/
+folder=$HOME/anime_wallpapers/
 
 extensions='.jpeg|.webp|.jpg|.png'
 
@@ -23,8 +22,21 @@ pic=$( ls $folder | shuf -n 1 )
 
 echo $folder$pic >> $HOME/.wallpapers.txt
 
-wal -qi $folder$pic 
+wal -qi $folder$pic
 
+# if [ -f $pic ]; then
+#     wal -qi $folder$pic 
+# else
+#     pic=$( ls $folder | shuf -n 1 )
+# fi
+
+if [[ $total_lines -gt 10 ]]; then
+    cat `head -n 10 $file | tail -n 5` > $file
+fi
+
+# some command I'd love to remember
+# find ~/pictures/ -type f -iname '*.jpg' | xargs -I '{}' convert '{}' -resize 150x150 -quality 100
+# '{}'.png
 
 # no_of_pics=$(cat -n pics.txt | tail -1 | cut -bd ' ' -f 1)
 # echo $n
